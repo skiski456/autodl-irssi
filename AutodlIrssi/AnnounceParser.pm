@@ -626,7 +626,7 @@ sub extractReleaseNameInfo {
 	};
 
 	my $indexYear;
-	if ($data = $findLast->($canonReleaseName, qr/(?:^|\D)(19[3-9]\d|20[012]\d)(?:\D|$)/)) {
+	if ($data = $findLast->($canonReleaseName, qr/(?:^|\D)(19[3-9]\d|20[01]\d)(?:\D|$)/)) {
 		$indexYear = $data->{index};
 		$setVariable->("year", 0 + $data->{value});
 	}
